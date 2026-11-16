@@ -27,12 +27,12 @@ private val Pale = Color(0xFFF3F7FB)
 private data class TravelSection(val title: String, val subtitle: String, val icon: androidx.compose.ui.graphics.vector.ImageVector)
 private val sections = listOf(
     TravelSection("Flights", "Search and compare flight options", Icons.Default.Flight),
-    TravelSection("My Trips", "View booking status and trip details", Icons.Default.Luggage),
+    TravelSection("My Trips", "View booking status and trip details", Icons.Default.CardTravel),
     TravelSection("Plan a Stay", "Plan accommodation and request help", Icons.Default.Hotel),
     TravelSection("Travel Packages", "Explore sample itineraries and request a quote", Icons.Default.Explore),
     TravelSection("Destinations", "Guides for places around the world", Icons.Default.Place),
     TravelSection("Visa Assistance", "Understand documents and request assistance", Icons.Default.Description),
-    TravelSection("Umrah & Hajj", "Pilgrimage planning and support", Icons.Default.Mosque),
+    TravelSection("Umrah & Hajj", "Pilgrimage planning and support", Icons.Default.Place),
     TravelSection("Travel Insurance", "Understand cover and request assistance", Icons.Default.Shield),
     TravelSection("Price Alerts", "Plan a route to monitor for fare changes", Icons.Default.Notifications),
     TravelSection("Help & Support", "Bookings, payments, changes and cancellations", Icons.Default.SupportAgent),
@@ -87,7 +87,7 @@ private fun TravelPkApp() {
                     listOf(
                         Triple("Home", Icons.Default.Home, "Home"),
                         Triple("Flights", Icons.Default.Flight, "Flights"),
-                        Triple("My Trips", Icons.Default.Luggage, "My Trips"),
+                        Triple("My Trips", Icons.Default.CardTravel, "My Trips"),
                         Triple("Help", Icons.Default.Help, "Help & Support")
                     ).forEach { (label, icon, destination) ->
                         NavigationBarItem(
