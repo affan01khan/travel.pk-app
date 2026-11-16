@@ -205,14 +205,13 @@ private fun TripsScreen(open: (String) -> Unit) {
 
 @Composable
 private fun HelpScreen(open: (String) -> Unit) {
+    val ctx = LocalContext.current
     Page {
         Heading("How can we help?", "Travel support and booking assistance.")
         Item("Phone support", "+92 42 3569 2952", "Use your phone dialler to contact the Travel.pk team.", "Call") {
-            val ctx = androidx.compose.ui.platform.LocalContext.current
             ctx.startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:+924235692952")))
         }
         Item("Email support", "info@travel.pk", "Send your question and include a booking reference if relevant.", "Email") {
-            val ctx = androidx.compose.ui.platform.LocalContext.current
             ctx.startActivity(Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:info@travel.pk")))
         }
         Item("Contact & WhatsApp", "Official contact page", "Find the available support channels and contact form.", "Contact us") { open("contact/") }
